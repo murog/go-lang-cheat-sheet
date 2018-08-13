@@ -385,6 +385,14 @@ for _, e := range a {
 for i := range a {
 }
 
+// iterate over key/value pairs
+keysAndValues := map[string]string{"a": "aardvark", "b": "beluga"}
+for k, v := range keysAndValues {
+	// k is the key
+	// v is the value
+	fmt.Printf("%s => %s\n", k, v)
+}
+
 // In Go pre-1.4, you'll get a compiler error if you're not using i and e.
 // Go 1.4 introduced a variable-free form, so that you can do this
 for range time.Tick(time.Second) {
