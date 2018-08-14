@@ -528,7 +528,11 @@ type error interface {
     Error() string
 }
 ```
-
+a custom error
+```go
+func (e *argError) Error() string {
+}
+```
 A function that might return an error:
 ```go
 func doStuff() (int, error) {
